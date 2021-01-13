@@ -1,0 +1,21 @@
+type Card {
+  id: Int
+  name: String
+  provider: String
+  type: String
+}
+
+type Query {
+  getCard(id: Int): Card
+  getCards: [Card]
+}
+
+type Mutation {
+  createCard(createCardInput: CreateCardInput): Card
+}
+
+input CreateCardInput {
+  name: String
+  provider: String
+  type: String
+}
